@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url("../assets/fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url("../assets/fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+    font-weight: 600;
+}

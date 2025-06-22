@@ -1,0 +1,675 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-background);
+}
+
+.secao-sobre,
+.secao-habilidades,
+.secao-experiencias,
+.secao-conquistas,
+.secao-contato,
+.secao-formulario {
+    scroll-margin-top: 6rem;
+}
+
+header.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-header);
+    padding: 1.5rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-clara);
+}
+
+.menu ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.menu a {
+    font-weight: 600;
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--cor-primaria);
+}
+
+main.conteudo {
+    padding: 8rem 10rem 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 4rem;
+    gap: 15rem;
+    margin-top: 6rem;
+}
+
+.texto-container {
+    flex: 1.5;
+    color: var(--cor-clara);
+}
+
+.texto-container h1 {
+    font-size: 3.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+}
+
+.texto-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.foto-container {
+    position: relative;
+    margin-right: -7rem;
+    width: fit-content;
+    flex: 1;
+}
+
+.foto-container img {
+    width: 300px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.retangulo-fundo {
+    position: absolute;
+    bottom: 21px;
+    left: 21px;
+    width: 300px;
+    height: 100%;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.menu a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--cor-primaria);
+    transition: width 0.3s ease-in-out;
+}
+
+.menu a.ativo::after {
+    width: 100%;
+}
+
+.secao-sobre {
+    padding: 1rem 8rem;
+    color: var(--cor-clara);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao-sobre h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.box-conheca p {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.grade-habilidades-pessoais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+.habilidades-pessoais-titulo {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-top: 6rem;
+}
+
+.habilidade-box {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    font-weight: 600;
+    color: var(--cor-clara);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.habilidade-box:hover {
+    transform: scale(1.05);
+}
+
+.secao-habilidades {
+    padding: 3rem 15rem;
+    color: var(--cor-clara);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao-habilidades h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 3rem;
+}
+
+.grade-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.icone-box {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.icone-box:hover {
+    transform: scale(1.05);
+}
+
+.icone-box img {
+    max-height: 50px;
+    max-width: 60px;
+    object-fit: contain;
+}
+
+.secao-experiencias {
+    padding: 3rem 15rem;
+    color: var(--cor-clara);
+    text-align: center;
+}
+
+.secao-experiencias h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 3rem;
+}
+
+.grade-experiencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.box-experiencia {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.box-experiencia:hover {
+    transform: scale(1.05);
+}
+
+.box-experiencia h3 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.box-experiencia p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.secao-conquistas {
+    padding: 3rem 15rem;
+    color: var(--cor-clara);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao-conquistas h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 3rem;
+}
+
+.box-conquista {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.box-conquista:hover {
+    transform: scale(1.05);
+}
+
+.box-conquista h3 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+}
+
+.box-conquista img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+}
+
+.box-conquista p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--cor-clara);
+}
+
+.botao-certificado {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: transparent;
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.botao-certificado:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.secao-contato {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+.texto-contato {
+    font-size: 1.3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+}
+
+.icones-redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.icones-redes a {
+    background-color: transparent;
+    padding: 0;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.icones-redes a:hover {
+    transform: scale(1.1);
+}
+
+.icones-redes img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-clara);
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    header.cabecalho {
+        padding: 1.2rem 2rem;
+        flex-direction: row;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--cor-background);
+        position: absolute;
+        top: 80px;
+        right: 2rem;
+        gap: 2rem;
+        padding: 2rem;
+        border: 2px solid var(--cor-primaria);
+        border-radius: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .conteudo-home {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto-container {
+        margin: 0;
+    }
+
+    .texto-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .secao-sobre,
+    .secao-conquistas,
+    .secao-experiencias,
+    .secao-habilidades {
+        padding: 3rem 2rem;
+    }
+
+    .grade-experiencias {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-habilidades,
+    .grade-habilidades-pessoais {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .box-conheca p {
+        font-size: 1rem;
+    }
+}
+
+.menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+    #fechar-menu {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: transparent;
+        border: none;
+        font-size: 3rem;
+        color: var(--cor-primaria);
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .menu-mobile.active {
+        display: flex;
+    }
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-mobile ul li {
+    width: 100%;
+}
+
+.menu-mobile ul li button#toggle-tema-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.menu-mobile ul li button#toggle-tema-mobile img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin: 0 auto;
+}
+
+    .menu-mobile ul li a {
+        font-size: 2rem;
+        color: var(--cor-clara);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .menu-mobile ul li a:hover {
+        color: var(--cor-primaria);
+    }
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-mobile {
+        display: none !important;
+    }
+}
+
+.secao-formulario {
+    padding: 1.5rem 2rem 3rem;
+    text-align: center;
+    color: var(--cor-clara);
+}
+
+.formulario-box {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 15px;
+    padding: 3rem 3rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.secao-formulario .texto-contato {
+    margin-bottom: 3rem;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 1rem 0.5rem;
+    color: var(--cor-clara);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    resize: none;
+    width: 100%;
+    outline: none;
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+    color: var(--cor-clara);
+    opacity: 0.7;
+    font-family: var(--fonte-principal);
+}
+
+.formulario-contato textarea {
+    min-height: 100px;
+}
+
+.formulario-contato button {
+    align-self: center;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: var(--cor-clara);
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 0.8rem 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.formulario-contato button:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+footer.rodape {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--cor-clara);
+    border-top: 1px solid var(--cor-primaria);
+    margin-top: 4rem;
+}
+
+#toggle-tema {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+#toggle-tema img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+#toggle-tema-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#toggle-tema-mobile img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}

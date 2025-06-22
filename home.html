@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio de Suzana</title>
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/root.css" />
+    <link rel="stylesheet" href="src/styles/font.css" />
+    <link rel="stylesheet" href="src/styles/home.css" />
+</head>
+<body>
+
+<header class="cabecalho">
+    <div class="logo">SvD!</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#conquistas">Conquistas</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+                <button id="toggle-tema" aria-label="Alternar tema" type="button">
+                    <img src="src/assets/images/modo.png" alt="Modo">
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="menu-mobile" id="menu-mobile">
+        <button id="fechar-menu" aria-label="Fechar menu">×</button>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#conquistas">Conquistas</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+                <button id="toggle-tema-mobile" aria-label="Alternar tema">
+                    <img src="src/assets/images/modo.png" alt="Modo">
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<main class="conteudo" id="inicio">
+    <div class="conteudo-home">
+        <div class="texto-container">
+            <h1>Oie, eu sou a Suzana!</h1>
+            <p>Seja bem-vindo(a) ao meu portfólio!</p>
+            <p>Estou iniciando minha jornada no mundo da tecnologia, e aqui compartilho meus primeiros passos, aprendizados e projetos.</p>
+            <p>Sinta-se à vontade para explorar e acompanhar minha evolução!</p>
+        </div>
+
+        <div class="foto-container">
+            <div class="retangulo-fundo"></div>
+            <img src="src/assets/images/fotoperfil.jpg" alt="Foto de Suzana" />
+        </div>
+    </div>
+</main>
+
+<section class="secao-sobre" id="sobre">
+    <h2>Conheça um pouco sobre mim</h2>
+
+    <div class="box-conheca">
+        <p>
+            Me chamo Suzana Vanessa Deliberal, tenho 20 anos e resido no interior de Barra do Rio Azul. Atualmente, curso
+            Ciência da Computação na URI Erechim, onde venho desenvolvendo meu interesse e conhecimento na área da tecnologia.<br /><br />
+            Atuo como estagiária de suporte técnico na Agro1, onde presto atendimento direto aos clientes, colaborando na
+            identificação e resolução de dúvidas e problemas relacionados aos sistemas da empresa. Essa experiência tem sido
+            fundamental para o desenvolvimento de habilidades como escuta ativa, empatia, comunicação clara e trabalho em equipe.<br /><br />
+            Busco constantemente evoluir profissionalmente, aprimorando meus conhecimentos técnicos e práticos para me tornar uma
+            profissional ainda mais preparada e comprometida.<br /><br />
+            Como curiosidade, sou soberana do meu município — uma vivência que tem enriquecido minha trajetória, fortalecendo minha
+            comunicação e ampliando meu contato com a comunidade.
+        </p>
+    </div>
+
+    <h3 class="habilidades-pessoais-titulo">Habilidades pessoais</h3>
+    <div class="grade-habilidades-pessoais">
+        <div class="habilidade-box">Comunicação</div>
+        <div class="habilidade-box">Trabalho em equipe</div>
+        <div class="habilidade-box">Criatividade</div>
+        <div class="habilidade-box">Olhar detalhista</div>
+        <div class="habilidade-box">Proatividade</div>
+    </div>
+</section>
+
+<section class="secao-conquistas" id="conquistas">
+    <h2>Conquistas</h2>
+    <div class="box-conquista">
+        <h3>AWS Certified Cloud Practitioner</h3>
+        <img src="src/assets/images/certificadoaws.png" alt="Certificado AWS" />
+        <p>
+            Certificada como AWS Cloud Practitioner, com conhecimentos fundamentais sobre os principais serviços da AWS, boas práticas de computação em nuvem, segurança, arquitetura e modelo de precificação.
+        </p>
+        <a href="https://www.credly.com/badges/3d2de15f-d542-4b84-b83b-f388d23adadd/linked_in?t=st4qky" target="_blank" class="botao-certificado">Visualizar certificação</a>
+    </div>
+</section>
+
+<section class="secao-experiencias" id="experiencias">
+    <h2>Experiências</h2>
+    <div class="grade-experiencias">
+        <div class="box-experiencia">
+            <h3>Compass UOL</h3>
+            <p>Durante meu estágio na Compass UOL, participei do desenvolvimento de aplicações back-end utilizando Java e Spring Boot. Tive contato com a criação de APIs, estruturação de sistemas e uso de metodologias ágeis como o Scrum, o que me proporcionou aprendizado técnico e também experiência prática em trabalho em equipe, organização e colaboração em projetos de tecnologia.</p>
+        </div>
+        <div class="box-experiencia">
+            <h3>Agro1</h3>
+            <p>Atualmente, atuo como estagiária de suporte técnico na Agro1, prestando atendimento direto aos clientes e auxiliando na resolução de dúvidas e problemas relacionados aos sistemas da empresa. Essa experiência tem sido fundamental para desenvolver minha comunicação, empatia e capacidade de entender as necessidades do usuário, além de fortalecer minha atuação em equipe em um ambiente colaborativo.</p>
+        </div>
+    </div>
+</section>
+
+<section class="secao-habilidades">
+    <h2>Tecnologias e ferramentas que já tive contato</h2>
+    <div class="grade-habilidades">
+        <div class="icone-box"><img src="src/assets/images/aws.png" alt="AWS" /></div>
+        <div class="icone-box"><img src="src/assets/images/csharp.png" alt="C#" /></div>
+        <div class="icone-box"><img src="src/assets/images/css.png" alt="CSS" /></div>
+        <div class="icone-box"><img src="src/assets/images/figma.png" alt="Figma" /></div>
+        <div class="icone-box"><img src="src/assets/images/git.png" alt="Git" /></div>
+        <div class="icone-box"><img src="src/assets/images/html.png" alt="HTML" /></div>
+        <div class="icone-box"><img src="src/assets/images/intellij.png" alt="IntelliJ" /></div>
+        <div class="icone-box"><img src="src/assets/images/java.png" alt="Java" /></div>
+        <div class="icone-box"><img src="src/assets/images/mongodb.png" alt="MongoDB" /></div>
+        <div class="icone-box"><img src="src/assets/images/mysql.png" alt="MySQL" /></div>
+        <div class="icone-box"><img src="src/assets/images/postman.png" alt="Spring Boot" /></div>
+        <div class="icone-box"><img src="src/assets/images/webstorm.png" alt="WebStorm" /></div>
+    </div>
+</section>
+
+<section class="secao-contato" id="contato">
+    <p class="texto-contato">Sinta-se à vontade para se conectar comigo</p>
+    <div class="icones-redes">
+        <a href="https://github.com/SuzanaDeliberal" target="_blank">
+            <img src="src/assets/images/github.png" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/suzana-vanessa-deliberal-8a58a634a/" target="_blank">
+            <img src="src/assets/images/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://mail.google.com/">
+            <img src="src/assets/images/gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://www.instagram.com/suzydeliberal/" target="_blank">
+            <img src="src/assets/images/instagram.png" alt="Instagram" />
+        </a>
+    </div>
+</section>
+
+<section class="secao-formulario" id="contato-form">
+    <p class="texto-contato">Ou, se preferir, pode me mandar uma mensagem direta: </p>
+    <div class="formulario-box">
+        <form id="formulario-contato" class="formulario-contato">
+            <input type="text" name="nome" placeholder="Seu nome" required />
+            <input type="email" name="email" placeholder="Seu e-mail" required />
+            <textarea name="mensagem" placeholder="Escreva aqui sua mensagem..." required></textarea>
+            <button type="submit">Enviar</button>
+            <p id="mensagem-status" style="margin-top:1rem;"></p>
+        </form>
+
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </div>
+</section>
+
+<footer class="rodape">
+    <p>&copy; 2025 Suzana Deliberal - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    const linksMenu = document.querySelectorAll('.menu a');
+    linksMenu.forEach(link => {
+        link.addEventListener('click', () => {
+            linksMenu.forEach(item => item.classList.remove('ativo'));
+            link.classList.add('ativo');
+        });
+    });
+    document.querySelector('.menu a[href="#inicio"]').classList.add('ativo');
+</script>
+
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('menu-mobile');
+    const closeBtn = document.getElementById('fechar-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+
+    document.querySelectorAll('.menu-mobile a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+</script>
+
+<script>
+    const form = document.getElementById('formulario-contato');
+    const status = document.getElementById('mensagem-status');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = "Enviando...";
+
+        const dados = {
+            nome: form.nome.value,
+            email: form.email.value,
+            mensagem: form.mensagem.value
+        };
+
+        try {
+            await fetch("https://script.google.com/macros/s/AKfycbzMdMIHk0lz5CgzELUrrNIJkodVR5IsUpxjTOYtc_jfjG-Pek7VwoG29LUJkdmOXfSr_A/exec", {
+                method: "POST",
+                body: JSON.stringify(dados),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+
+            status.textContent = "Mensagem enviada com sucesso!";
+            form.reset();
+        } catch (error) {
+            status.textContent = "Ocorreu um erro. Tente novamente.";
+        }
+    });
+</script>
+
+<script>
+    const body = document.body;
+
+    const toggleDesktop = document.getElementById('toggle-tema');
+    const toggleMobile = document.getElementById('toggle-tema-mobile');
+
+    function toggleTema() {
+        body.classList.toggle('light');
+        const modo = body.classList.contains('light') ? 'light' : 'dark';
+        localStorage.setItem('tema', modo);
+    }
+
+    if (toggleDesktop) toggleDesktop.addEventListener('click', toggleTema);
+    if (toggleMobile) toggleMobile.addEventListener('click', toggleTema);
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const temaSalvo = localStorage.getItem('tema') || 'dark';
+        body.classList.add(temaSalvo);
+    });
+</script>
+
+</body>
+</html>
