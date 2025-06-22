@@ -177,18 +177,13 @@
     <p class="texto-contato">Ou, se preferir, pode me mandar uma mensagem direta: </p>
     <div class="formulario-box">
         <form
-                id="formulario-contato"
-                class="formulario-contato"
+                action="https://formspree.io/f/mgvynegq"
                 method="POST"
-                action="https://script.google.com/macros/s/AKfycbzMdMIHk0lz5CgzELUrrNIJkodVR5IsUpxjTOYtc_jfjG-Pek7VwoG29LUJkdmOXfSr_A/exec"
-                target="hidden_iframe"
-                onsubmit="document.getElementById('mensagem-status').textContent = 'Mensagem enviada com sucesso!'; this.reset();"
         >
-            <input type="text" name="nome" placeholder="Seu nome" required />
-            <input type="email" name="email" placeholder="Seu e-mail" required />
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
             <textarea name="mensagem" placeholder="Escreva aqui sua mensagem..." required></textarea>
             <button type="submit">Enviar</button>
-            <p id="mensagem-status" style="margin-top:1rem;"></p>
         </form>
 
         <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -230,36 +225,28 @@
     });
 </script>
 
-<!--<script>-->
-<!--    const form = document.getElementById('formulario-contato');-->
-<!--    const status = document.getElementById('mensagem-status');-->
+<script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-<!--    form.addEventListener('submit', async (e) => {-->
-<!--        e.preventDefault();-->
-<!--        status.textContent = "Enviando...";-->
-
-<!--        const dados = {-->
-<!--            nome: form.nome.value,-->
-<!--            email: form.email.value,-->
-<!--            mensagem: form.mensagem.value-->
-<!--        };-->
-
-<!--        try {-->
-<!--            await fetch("https://script.google.com/macros/s/AKfycbzMdMIHk0lz5CgzELUrrNIJkodVR5IsUpxjTOYtc_jfjG-Pek7VwoG29LUJkdmOXfSr_A/exec", {-->
-<!--                method: "POST",-->
-<!--                body: JSON.stringify(dados),-->
-<!--                headers: {-->
-<!--                    "Content-Type": "application/json"-->
-<!--                }-->
-<!--            });-->
-
-<!--            status.textContent = "Mensagem enviada com sucesso!";-->
-<!--            form.reset();-->
-<!--        } catch (error) {-->
-<!--            status.textContent = "Ocorreu um erro. Tente novamente.";-->
-<!--        }-->
-<!--    });-->
-<!--</script>-->
+        const data = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                alert("Mensagem enviada com sucesso!");
+                form.reset();
+            } else {
+                alert("Erro ao enviar. Tente novamente.");
+            }
+        }).catch(() => {
+            alert("Erro ao enviar. Tente novamente.");
+        });
+    });
+</script>
 
 <script>
     const body = document.body;
