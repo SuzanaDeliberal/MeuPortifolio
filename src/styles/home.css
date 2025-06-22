@@ -179,7 +179,8 @@ main.conteudo {
     border-radius: 10px;
     padding: 1.5rem;
     display: flex;
-    flex: 1;
+    flex: 0 1 150px;
+    max-width: 150px;
     justify-content: center;
     align-items: center;
     height: 90px;
@@ -406,7 +407,7 @@ main.conteudo {
     border-radius: 3px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header.cabecalho {
         padding: 1.2rem 2rem;
         flex-direction: row;
@@ -493,21 +494,21 @@ main.conteudo {
     z-index: 9999;
 }
 
-    #fechar-menu {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: transparent;
-        border: none;
-        font-size: 3rem;
-        color: var(--cor-primaria);
-        cursor: pointer;
-        line-height: 1;
-    }
+#fechar-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    line-height: 1;
+}
 
-    .menu-mobile.active {
-        display: flex;
-    }
+.menu-mobile.active {
+    display: flex;
+}
 
 .menu-mobile ul {
     list-style: none;
@@ -542,19 +543,19 @@ main.conteudo {
     margin: 0 auto;
 }
 
-    .menu-mobile ul li a {
-        font-size: 2rem;
-        color: var(--cor-clara);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+.menu-mobile ul li a {
+    font-size: 2rem;
+    color: var(--cor-clara);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-    .menu-mobile ul li a:hover {
-        color: var(--cor-primaria);
-    }
+.menu-mobile ul li a:hover {
+    color: var(--cor-primaria);
+}
 
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .menu {
         display: none;
     }
@@ -565,9 +566,32 @@ main.conteudo {
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .menu-mobile {
         display: none !important;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .conteudo-home {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .texto-container {
+        width: 100%;
+    }
+
+    .foto-container {
+        margin: 0;
+    }
+
+    .texto-container h1 {
+        font-size: 2.8rem;
     }
 }
 
