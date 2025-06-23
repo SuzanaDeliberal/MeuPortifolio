@@ -673,7 +673,8 @@ footer.rodape {
     margin-top: 4rem;
 }
 
-#toggle-tema {
+#toggle-tema,
+#toggle-tema-mobile {
     background: none;
     border: none;
     cursor: pointer;
@@ -684,25 +685,19 @@ footer.rodape {
     margin-left: 1rem;
 }
 
-#toggle-tema img {
-    width: 30px;
-    height: 30px;
-    display: block;
-}
-
-#toggle-tema-mobile {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
+#toggle-tema img,
 #toggle-tema-mobile img {
-    width: 30px;
-    height: 30px;
-    display: block;
+    display: none !important;
+}
+
+#toggle-tema i,
+#toggle-tema-mobile i {
+    width: 28px;
+    height: 28px;
+    stroke: var(--cor-primaria);
+}
+
+#toggle-tema svg,
+#toggle-tema-mobile svg {
+    color: var(--cor-clara);
 }

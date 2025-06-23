@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/styles/root.css" />
     <link rel="stylesheet" href="src/styles/font.css" />
     <link rel="stylesheet" href="src/styles/home.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -28,8 +29,10 @@
             <li><a href="#experiencias">Experiências</a></li>
             <li><a href="#contato">Contato</a></li>
             <li>
-                <button id="toggle-tema" aria-label="Alternar tema" type="button">
-                    <img src="src/assets/images/modo.png" alt="Modo">
+                <button id="toggle-tema">
+                    <svg id="icone-tema" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <!-- Ícone será inserido via JS -->
+                    </svg>
                 </button>
             </li>
         </ul>
@@ -44,8 +47,10 @@
             <li><a href="#experiencias">Experiências</a></li>
             <li><a href="#contato">Contato</a></li>
             <li>
-                <button id="toggle-tema-mobile" aria-label="Alternar tema">
-                    <img src="src/assets/images/modo.png" alt="Modo">
+                <button id="toggle-tema-mobile">
+                    <svg id="icone-tema-mobile" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <!-- Ícone será inserido via JS -->
+                    </svg>
                 </button>
             </li>
         </ul>
@@ -239,11 +244,30 @@
 
     const toggleDesktop = document.getElementById('toggle-tema');
     const toggleMobile = document.getElementById('toggle-tema-mobile');
+    const iconeDesktop = document.getElementById('icone-tema');
+    const iconeMobile = document.getElementById('icone-tema-mobile');
+
+    const iconeSol = `
+    <circle cx="12" cy="12" r="5"/>
+    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+  `;
+
+    const iconeLua = `
+    <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"/>
+  `;
+
+    function atualizarIcones() {
+        const modo = body.classList.contains('light') ? 'light' : 'dark';
+        const icone = modo === 'light' ? iconeLua : iconeSol;
+        if (iconeDesktop) iconeDesktop.innerHTML = icone;
+        if (iconeMobile) iconeMobile.innerHTML = icone;
+    }
 
     function toggleTema() {
         body.classList.toggle('light');
         const modo = body.classList.contains('light') ? 'light' : 'dark';
         localStorage.setItem('tema', modo);
+        atualizarIcones();
     }
 
     if (toggleDesktop) toggleDesktop.addEventListener('click', toggleTema);
@@ -252,6 +276,7 @@
     window.addEventListener('DOMContentLoaded', () => {
         const temaSalvo = localStorage.getItem('tema') || 'dark';
         body.classList.add(temaSalvo);
+        atualizarIcones();
     });
 </script>
 
