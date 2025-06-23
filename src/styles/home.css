@@ -210,12 +210,13 @@ main.conteudo {
 }
 
 .grade-habilidades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
     max-width: 900px;
     width: 100%;
+    align-items: center;
 }
 
 .icone-box {
@@ -611,7 +612,7 @@ main.conteudo {
 }
 
 .secao-formulario .texto-contato {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .formulario-contato {
